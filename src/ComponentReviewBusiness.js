@@ -25,7 +25,7 @@ export default class ComponentReviewBusiness extends React.Component {
     }
 
     getInfo = () => {
-        axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${this.props.params.match.id}`, {
+        axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${this.props.match.params.id}`, {
             headers: {
                 'Authorization': 'Bearer yjB7J7SPkeZRSuWFmYV0sUu3JHoqvdDoluHHeF-XPzdrTjFWtJn29TO2L0IYYoUM_i1wVWelAOvZM4l6Q54kdCF_ViAjf7cc5oF8D1qq7s_hx8v8vWJdEI3jPjgmYHYx',
             }
@@ -34,7 +34,7 @@ export default class ComponentReviewBusiness extends React.Component {
         .catch(err => console.log(err))
     }
     getReviews = () => {
-        axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${this.props.params.match.id}/reviews`, {
+        axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${this.props.match.params.id}/reviews`, {
             headers: {
                 'Authorization': 'Bearer yjB7J7SPkeZRSuWFmYV0sUu3JHoqvdDoluHHeF-XPzdrTjFWtJn29TO2L0IYYoUM_i1wVWelAOvZM4l6Q54kdCF_ViAjf7cc5oF8D1qq7s_hx8v8vWJdEI3jPjgmYHYx',
             }

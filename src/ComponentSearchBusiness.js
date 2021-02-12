@@ -33,7 +33,7 @@ export default class ComponentSearchBusiness extends React.Component {
     }
     
     getData = (props) => {
-        axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${props.term}&location=${props.location}&categories=${props.categories}`, {
+        axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${this.props.term}&location=${this.props.location}&categories=${this.props.categories}`, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Headers': 'Content-Type,Authorization',
